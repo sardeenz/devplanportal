@@ -1,0 +1,52 @@
+<!--
+    Copyright 2010 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <string name="description_home">Welcome to the Development Plan Portal</string>
+    <string name="app_name">What\'s Around Me?</string>
+    <string name="next">Next</string>
+    <string name="description_map">Map</string>
+   	<string name="results">Here is the information returned from the Open Data Geo Portal</string> 
+  	<string name="orGetGPSCoords">Or</string> 
+  	<string name="dialog_message">"http://www.google.com"</string>
+    <string name="searchaddress">
+        <string name="searchaddress">
+        What\'s Around Me?
+    	</string>
+    </string>
+    <string name="Welcome">
+        <![CDATA[
+      <p></p>  
+      <p>
+        Welcome to the <b>What&apos;s Around Me?</b> demo application. 
+        <p>
+        What&apos;s Around Me? allows location based searches around important places of interest provided
+        by open government data sets.
+        </p>
+        <p>Have you ever seen a construction site and 
+        wondered, "What's going on over there? What are they building?" This application allows you to 
+        search for an address or take your current location and display information about 
+        the chosen area from multiple data sets.        
+        </p>
+      <p>
+      	Currently, the background process gets any development plan data within a specified radius of your location or
+      	of the location entered.
+      	</p>
+      <p>
+        </p>
+      ]]>
+    </string>
+ 
+</resources>
