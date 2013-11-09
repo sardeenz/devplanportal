@@ -322,6 +322,8 @@ public class JsonDownloaderActivity extends Activity {
 			List<NameValuePair> parms = new ArrayList<NameValuePair>(6);
 			parms.add(new BasicNameValuePair("geometries", xycoords));
 			parms.add(new BasicNameValuePair("inSR", "4326"));
+			parms.add(new BasicNameValuePair("outSR", "4326"));
+			parms.add(new BasicNameValuePair("bufferSR", "2264"));
 			parms.add(new BasicNameValuePair("distances", "100"));
 			parms.add(new BasicNameValuePair("unit", "9001"));
 			parms.add(new BasicNameValuePair("unionResults", "false"));
