@@ -260,7 +260,8 @@ public class JsonDownloaderActivity extends Activity {
          */
          private String getDevelopmentPlans(String geometry){
                 String result = null;
-                String url = "http://maps.raleighnc.gov/ArcGIS/rest/services/Geoportal/DataMapService/MapServer/16/query";
+                //String url = "http://maps.raleighnc.gov/ArcGIS/rest/services/Geoportal/DataMapService/MapServer/16/query";
+                String url = "http://maps.raleighnc.gov/arcgis/rest/services/Geoprocessing/DataMapService/MapServer/16/query";
                 List<NameValuePair> parms = new ArrayList<NameValuePair>(9);
                 parms.add(new BasicNameValuePair("geometry", geometry));
           parms.add(new BasicNameValuePair("geometryType", "esriGeometryPolygon"));
@@ -318,15 +319,17 @@ public class JsonDownloaderActivity extends Activity {
 		 */
 		private static String pointToPolygon(String xycoords, String diameter){
 			String result = null;
-			String url = "http://maps.raleighnc.gov/ArcGIS/rest/services/Geometry/GeometryServer/buffer";
-			List<NameValuePair> parms = new ArrayList<NameValuePair>(6);
+			//String url = "http://maps.raleighnc.gov/ArcGIS/rest/services/Geometry/GeometryServer/buffer";
+			String url = "http://maps.raleighnc.gov/arcgis/rest/services/Utilities/Geometry/GeometryServer/buffer";
+			List<NameValuePair> parms = new ArrayList<NameValuePair>(9);
 			parms.add(new BasicNameValuePair("geometries", xycoords));
 			parms.add(new BasicNameValuePair("inSR", "4326"));
 			parms.add(new BasicNameValuePair("outSR", "4326"));
 			parms.add(new BasicNameValuePair("bufferSR", "2264"));
 			parms.add(new BasicNameValuePair("distances", "100"));
-			parms.add(new BasicNameValuePair("unit", "9001"));
+			parms.add(new BasicNameValuePair("unit", "9002"));
 			parms.add(new BasicNameValuePair("unionResults", "false"));
+			parms.add(new BasicNameValuePair("geodesic", "true"));
 			parms.add(new BasicNameValuePair("f", "pjson"));
 			
 			result = doPost(url, parms);
